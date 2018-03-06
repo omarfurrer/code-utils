@@ -11,8 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  { path: '/home', component: HomeComponent },
-  { path: '',
+  { path: 'home', component: HomeComponent },
+  {
+    path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
@@ -29,7 +30,10 @@ const appRoutes: Routes = [
     PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes, {
+      enableTracing: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,7 @@
 @import "~bootswatch/dist/cyborg/_variables.scss";
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~bootswatch/dist/cyborg/_bootswatch.scss";
+
+.active{
+  color: $success;
+}

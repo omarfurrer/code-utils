@@ -12,10 +12,12 @@ import { ContentComponent } from './content/content.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { Base64EncoderComponent } from './base-64-encoder/base-64-encoder.component';
+import { Base64DecoderComponent } from './base-64-decoder/base-64-decoder.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'encode/base64', component: Base64EncoderComponent },
+  { path: 'decode/base64', component: Base64DecoderComponent },
   {
     path: '',
     redirectTo: '/home',
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     ContentComponent,
     HomeComponent,
     PageNotFoundComponent,
-    Base64EncoderComponent
+    Base64EncoderComponent,
+    Base64DecoderComponent
   ],
   imports: [
     BrowserModule,

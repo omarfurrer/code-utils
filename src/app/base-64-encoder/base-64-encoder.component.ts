@@ -16,7 +16,7 @@ export class Base64EncoderComponent implements OnInit {
   }
 
   encodeBase64(stringToEncode: string): void {
-    this.encodedString = btoa(encodeURIComponent(stringToEncode));
+    this.encodedString = btoa(stringToEncode);
   }
 
 }

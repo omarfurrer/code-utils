@@ -19,6 +19,7 @@
       <div class="card-body">
         <div class="form-group">
           <label for="encodedString">Encoded String</label>
+          <span class="float-right"><a href="javascript:;" ngxClipboard [cbContent]="encodedString">copy</a></span>
           <textarea name="encodedString" class="form-control" id="encodedString" rows="7">{{encodedString}}</textarea>
         </div>
       </div>

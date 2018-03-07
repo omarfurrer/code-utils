@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { Base64EncoderComponent } from './base-64-encoder/base-64-encoder.component';
 import { Base64DecoderComponent } from './base-64-decoder/base-64-decoder.component';
+import { UtilitiesService } from './utilities.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -45,7 +46,7 @@ const appRoutes: Routes = [
       enableTracing: true
     })
   ],
-  providers: [],
+  providers: [UtilitiesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

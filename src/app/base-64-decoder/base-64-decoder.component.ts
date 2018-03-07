@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilitiesService } from '../utilities.service';
 
 @Component({
   selector: 'app-base-64-decoder',
@@ -10,13 +11,13 @@ export class Base64DecoderComponent implements OnInit {
   stringToDecode = '';
   decodedString = '';
 
-  constructor() { }
+  constructor(private utilitiesService: UtilitiesService) { }
 
   ngOnInit() {
   }
 
   decodeBase64(stringToDecode: string): void {
-    this.decodedString = atob(stringToDecode);
+    this.decodedString = this.utilitiesService.decodeBase64(stringToDecode);
   }
 
 }

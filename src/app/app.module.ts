@@ -17,6 +17,7 @@ import { UtilitiesService } from './utilities.service';
 import { UrlEncoderComponent } from './url-encoder/url-encoder.component';
 import { UrlDecoderComponent } from './url-decoder/url-decoder.component';
 import { StringLengthCounterComponent } from './string-length-counter/string-length-counter.component';
+import { RandomStringGeneratorComponent } from './random-string-generator/random-string-generator.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   { path: 'encode/url', component: UrlEncoderComponent },
   { path: 'decode/url', component: UrlDecoderComponent },
   { path: 'count/string', component: StringLengthCounterComponent },
+  { path: 'random/string', component: RandomStringGeneratorComponent },
   {
     path: '',
     redirectTo: '/home',
@@ -45,7 +47,8 @@ const appRoutes: Routes = [
     Base64DecoderComponent,
     UrlEncoderComponent,
     UrlDecoderComponent,
-    StringLengthCounterComponent
+    StringLengthCounterComponent,
+    RandomStringGeneratorComponent
   ],
   imports: [
     BrowserModule,

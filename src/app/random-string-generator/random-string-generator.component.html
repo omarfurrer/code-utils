@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h3 class="text-center">Random String Generator</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="stringLength">Length</label>
+            <input type="number" min="1" (keydown.enter)="generateRandomString(stringLength);false"
+             [(ngModel)]="stringLength" name="stringLength" class="form-control" id="stringLength">
+          </div>
+          <a class="btn btn-primary text-white float-right btn-block" (click)="generateRandomString(stringLength)">Generate</a>
+        </form>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="randomString">Random String</label>
+          <span class="float-right"><a href="javascript:;" ngxClipboard [cbContent]="randomString">copy</a></span>
+          <textarea name="randomString" class="form-control" id="randomString" rows="7">{{randomString}}</textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

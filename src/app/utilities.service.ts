@@ -21,4 +21,8 @@ export class UtilitiesService {
     return decodeURI(toDecode);
   }
 
+  countStringLength(toCount: string): number {
+    return toCount.length;
+  }
+
 }

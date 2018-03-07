@@ -16,6 +16,7 @@ import { Base64DecoderComponent } from './base-64-decoder/base-64-decoder.compon
 import { UtilitiesService } from './utilities.service';
 import { UrlEncoderComponent } from './url-encoder/url-encoder.component';
 import { UrlDecoderComponent } from './url-decoder/url-decoder.component';
+import { StringLengthCounterComponent } from './string-length-counter/string-length-counter.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'decode/base64', component: Base64DecoderComponent },
   { path: 'encode/url', component: UrlEncoderComponent },
   { path: 'decode/url', component: UrlDecoderComponent },
+  { path: 'count/string', component: StringLengthCounterComponent },
   {
     path: '',
     redirectTo: '/home',
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     Base64EncoderComponent,
     Base64DecoderComponent,
     UrlEncoderComponent,
-    UrlDecoderComponent
+    UrlDecoderComponent,
+    StringLengthCounterComponent
   ],
   imports: [
     BrowserModule,

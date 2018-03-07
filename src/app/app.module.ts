@@ -14,11 +14,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { Base64EncoderComponent } from './base-64-encoder/base-64-encoder.component';
 import { Base64DecoderComponent } from './base-64-decoder/base-64-decoder.component';
 import { UtilitiesService } from './utilities.service';
+import { UrlEncoderComponent } from './url-encoder/url-encoder.component';
+import { UrlDecoderComponent } from './url-decoder/url-decoder.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'encode/base64', component: Base64EncoderComponent },
   { path: 'decode/base64', component: Base64DecoderComponent },
+  { path: 'encode/url', component: UrlEncoderComponent },
+  { path: 'decode/url', component: UrlDecoderComponent },
   {
     path: '',
     redirectTo: '/home',
@@ -36,7 +40,9 @@ const appRoutes: Routes = [
     HomeComponent,
     PageNotFoundComponent,
     Base64EncoderComponent,
-    Base64DecoderComponent
+    Base64DecoderComponent,
+    UrlEncoderComponent,
+    UrlDecoderComponent
   ],
   imports: [
     BrowserModule,

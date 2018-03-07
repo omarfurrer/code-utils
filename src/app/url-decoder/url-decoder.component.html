@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h3 class="text-center">Decode Url</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="stringToDecode">String to decode</label>
+            <textarea (keydown.enter)="decodeBase64(stringToDecode);false"
+             [(ngModel)]="stringToDecode" name="stringToDecode" class="form-control" id="stringToDecode" rows="7"></textarea>
+          </div>
+          <a class="btn btn-primary text-white float-right btn-block" (click)="decodeBase64(stringToDecode)">Decode</a>
+        </form>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="decodedString">Decoded String</label>
+          <span class="float-right"><a href="javascript:;" ngxClipboard [cbContent]="decodedString">copy</a></span>
+          <textarea name="decodedString" class="form-control" id="decodedString" rows="7">{{decodedString}}</textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

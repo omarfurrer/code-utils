@@ -13,4 +13,12 @@ export class UtilitiesService {
     return atob(toDecode);
   }
 
+  encodeUrl(toEncode: string): string {
+    return encodeURI(toEncode);
+  }
+
+  decodeUrl(toDecode: string): string {
+    return decodeURI(toDecode);
+  }
+
 }

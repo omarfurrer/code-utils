@@ -20,7 +20,7 @@
         <div class="form-group">
           <label for="randomString">Random String</label>
           <span class="float-right"><a href="javascript:;" ngxClipboard [cbContent]="randomString">copy</a></span>
-          <textarea name="randomString" class="form-control" id="randomString" rows="7">{{randomString}}</textarea>
+          <textarea (click)="$event.target.select()" name="randomString" class="form-control" id="randomString" rows="7">{{randomString}}</textarea>
         </div>
       </div>
     </div>

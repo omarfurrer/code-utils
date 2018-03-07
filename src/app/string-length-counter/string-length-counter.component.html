@@ -10,8 +10,8 @@
         <form>
           <div class="form-group">
             <label for="stringToCount">String to count</label>
-            <textarea (keydown.enter)="countStringLength(stringToCount);false"
-             [(ngModel)]="stringToCount" name="stringToCount" class="form-control" id="stringToCount" rows="7"></textarea>
+            <textarea [(ngModel)]="stringToCount" (keydown.enter)="countStringLength(stringToCount);false"
+             (ngModelChange)="countStringLength(stringToCount)" name="stringToCount" class="form-control" id="stringToCount" rows="7"></textarea>
           </div>
           <a class="btn btn-primary text-white float-right btn-block" (click)="countStringLength(stringToCount)">Count</a>
         </form>

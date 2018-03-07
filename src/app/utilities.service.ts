@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+// Exposing crypto module from node for true random number generation https://github.com/angular/angular-cli/issues/1548
+declare var require: any;
+const crypto: any = require('crypto');
 
 @Injectable()
 export class UtilitiesService {
@@ -24,5 +27,12 @@ export class UtilitiesService {
   countStringLength(toCount: string): number {
     return toCount.length;
   }
+
+  generateRandomString(length: number): string {
+    return crypto.randomBytes(Math.ceil(length/2))
+         .toString('hex') // convert to hexadecimal format
+         .slice(0,length);   // return required number of characters
+  }
+
 
 }
